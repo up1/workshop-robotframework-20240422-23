@@ -8,6 +8,10 @@ Hello with Google
     ต้องเจอผลการค้นหาที่ถูกต้อง
 
 *** Keywords ***
+ต้องเจอผลการค้นหาที่ถูกต้อง
+    Wait Until Element Contains   name:q   Hello robotframework
+
+
 เปิด browser ไปยังหน้าค้นหาข้อมูล
     Open Browser    http://www.google.com    browser=chrome   options=add_experimental_option("detach", True)
     Maximize Browser Window
