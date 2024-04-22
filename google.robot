@@ -10,6 +10,8 @@ Hello with Google
 *** Keywords ***
 ต้องเจอผลการค้นหาที่ถูกต้อง
     Wait Until Element Contains   name:q   Hello robotframework
+    ${data}=  Get Text  id:result-stats
+    Log to console   ${data}
 
 
 เปิด browser ไปยังหน้าค้นหาข้อมูล
