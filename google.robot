@@ -1,5 +1,6 @@
 *** Settings ***
-Library      SeleniumLibrary
+Library         SeleniumLibrary
+Library         String
 
 *** Test Cases ***
 Hello with Google
@@ -11,11 +12,11 @@ Hello with Google
 ต้องเจอผลการค้นหาที่ถูกต้อง
     Wait Until Element Contains   name:q   Hello robotframework
     ${data}=  Get Text  id:result-stats
-    @{values}=   Split String   ${DATA}   ${SPACE}   max_split=3
+    @{values}=   Split String   ${data}   ${SPACE}   max_split=3
     Should be equal   ${values[0]}   ผลการค้นหาประมาณ
     Should be equal   ${values[2]}   รายการ
     Should Start With  ${values[3]}   (
-    Should End With    ${values[3]}   )
+    Should End With    ${values[3]}   )${SPACE}
 
 
 เปิด browser ไปยังหน้าค้นหาข้อมูล
