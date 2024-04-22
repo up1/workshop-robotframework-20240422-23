@@ -20,10 +20,10 @@ Hello with Google
 
 
 เปิด browser ไปยังหน้าค้นหาข้อมูล
-    Open Browser    http://www.google.com    browser=chrome   options=add_experimental_option("detach", True)
-    Maximize Browser Window
+    SeleniumLibrary.Open Browser    http://www.google.com    browser=chrome   options=add_experimental_option("detach", True)
+    SeleniumLibrary.Maximize Browser Window
 
 พิมพ์คำว่า "Hello robotframework" ในช่องค้นหา
-    Input Text   name:q  Hello robotframework
-    Press Keys   name:q  RETURN
+    SeleniumLibrary.Input Text   name:q  Hello robotframework
+    SeleniumLibrary.Press Keys   name:q  RETURN
     
