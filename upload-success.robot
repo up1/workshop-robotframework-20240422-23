@@ -36,6 +36,6 @@ Upload 3 files
 
 
 เข้ามายังหน้า upload file
-    Open Browser   ${UPLOAD_URL}     browser=chrome   options=add_experimental_option("detach", True)
+    Open Browser   ${UPLOAD_URL}     browser=chrome   options=add_experimental_option("detach", True);add_argument("--allow-running-insecure-content")
     Maximize Browser Window
     # Check if the page is loaded
