@@ -9,6 +9,9 @@ Test Template     Template for login failed
 ${LOGIN_URL}    http://152.42.252.238:8000/
 
 *** Test Cases ***
+#----------------------------------------------------
+#  Test case name           |  username  | password  
+#----------------------------------------------------
 Wrong password                  demo     mode2
 Wrong username                  demo2    mode
 Wrong username and password     demo2    mode2
