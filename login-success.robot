@@ -6,6 +6,13 @@ ${LOGIN_URL}    http://152.42.252.238:8000/
 
 *** Test Cases ***
 Login success
+    [Tags]    done   feature01
+    Open login page
+    Fill in user="demo" and password="mode"
+    Should display Welcome Page
+
+Login success 2
+    [Tags]    testing   feature02
     Open login page
     Fill in user="demo" and password="mode"
     Should display Welcome Page
