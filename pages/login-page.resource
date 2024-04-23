@@ -13,6 +13,8 @@ Fill in data
 
 Open login page
     Open Browser    ${LOGIN_URL}    browser=chrome   options=add_experimental_option("detach", True)
+    ...  remote_url=http://159.223.55.226:4444/wd/hub
+
     Maximize Browser Window
     Title Should Be    Login Page
 
