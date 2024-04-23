@@ -1,6 +1,9 @@
 *** Settings ***
 Library           SeleniumLibrary
 
+*** Variables ***
+${LOGIN_URL}    http://152.42.252.238:8000/
+
 *** Test Cases ***
 Login success
     Open login page
@@ -18,6 +21,6 @@ Fill in user="demo" and password="mode"
     Click Button    id=login_button
 
 Open login page
-    Open Browser    http://152.42.252.238:8000/    browser=chrome   options=add_experimental_option("detach", True)
+    Open Browser    ${LOGIN_URL}    browser=chrome   options=add_experimental_option("detach", True)
     Maximize Browser Window
     Title Should Be    Login Page
