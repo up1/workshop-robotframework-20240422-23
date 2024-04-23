@@ -7,13 +7,24 @@ ${LOGIN_URL}    http://152.42.252.238:8000/
 *** Test Cases ***
 Wrong password
     Open login page
-    Fill in user="demo" and password="mode2"
+    Fill in data   demo    mode2
+    Should display Error Page
+
+Wrong username
+    Open login page
+    Fill in user="demo2" and password="mode"
     Should display Error Page
 
 *** Keywords ***
-Fill in user="demo" and password="mode2"
-    Input Text    id=username_field    demo
-    Input Text    id=password_field    mode2
+Fill in data
+    [Arguments]    ${username}    ${password}
+    Input Text    id=username_field    ${username}
+    Input Text    id=password_field    ${password}
+    Click Button    id=login_button
+
+Fill in user="${username}" and password="${password}"
+    Input Text    id=username_field    ${username}
+    Input Text    id=password_field    ${password}
     Click Button    id=login_button
 
 Should display Error Page
